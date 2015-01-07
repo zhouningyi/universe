@@ -49,12 +49,20 @@ define(['zepto'], function() {
     }
   };
 
+  function getY(e){//取得事件的y值
+    if(e.pageY){
+      return e.pageY;
+    }else if(e.originalEvent){
+      return e.originalEvent.touches[0].clientY;
+    }else if(e.touches){
+      return e.touches[0].clientY;
+    }
+  }
+
   Cotroller.prototype.down = function(e) {
     e.preventDefault();
     this.drag = true;
-    console.log(e)
-    var touch = (e.originalEvent) ? e.originalEvent.touches[0] : e.touches[0];
-    var y = touch.clientY;
+    var y = getY(e);
     this.downY = y;
     this.rotateyDown = this.rotatey;
     this.time = new Date();
@@ -82,10 +90,7 @@ define(['zepto'], function() {
   var curY;
   Cotroller.prototype.move = function(e) {
     e.preventDefault();
-    console.log(e,'move')
-    var touch = (e.originalEvent) ? e.originalEvent.touches[0] : e.touches[0];
-    var y = touch.clientY;
-    var x = touch.clientX;
+    var y = getY(e);
     if (this.drag) {
       var dy = y - this.downY;
       var rotatey = this.rotatey = this.rotateyDown - dy * this.mouse2RotatePhi;
