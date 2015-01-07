@@ -1,0 +1,71 @@
+#universe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: transparent;
+  height: 100%; width: 100%;
+  overflow: hidden;
+  position: relative;
+  -webkit-perspective: 350px;
+  -moz-perspective: 350px;
+  perspective: 350px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+}
+
+#panorama {
+  width: 100%;
+  height: 100%;
+  opacity: 1;
+  background: transparent;
+  -webkit-transition: opacity 0.5s ease;
+  -moz-transition: opacity 0.5s ease;
+  transition: opacity 0.5s ease;
+}
+#panorama, #panorama .face {
+  position: absolute;
+  top: -200px; 
+  left: -200px;
+  width: 1600px; height: 1600px;
+  -webkit-transform-style: preserve-3d;
+  -moz-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+}
+#panorama .face, .label {
+  -webkit-backface-visibility:hidden;
+  -moz-backface-visibility:hidden;
+  backface-visibility:hidden;
+}
+
+#panorama .face:nth-child(1) {
+  -webkit-transform: rotateX(90deg) translateZ(-799px);
+  -moz-transform: rotateX(90deg) translateZ(-799px);
+  transform: rotateX(90deg) translateZ(-799px);
+}
+#panorama .face:nth-child(2) {
+  -webkit-transform: rotateX(-90deg) translateZ(-799px);
+  -moz-transform: rotateX(-90deg) translateZ(-799px);
+  transform: rotateX(-90deg) translateZ(-799px);
+}
+#panorama .face:nth-child(3) {
+  -webkit-transform: rotateY(90deg) translateZ(-799px);
+  -moz-transform: rotateY(90deg) translateZ(-799px);
+  transform: rotateY(90deg) translateZ(-799px);
+}
+#panorama .face:nth-child(4) {
+  -webkit-transform: rotateY(-90deg) translateZ(-799px);
+  -moz-transform: rotateY(-90deg) translateZ(-799px);
+  transform: rotateY(-90deg) translateZ(-799px);
+
+}
+#panorama .face:nth-child(5) {
+  -webkit-transform: translateZ(-799px);
+  -moz-transform: translateZ(-799px);
+  transform: translateZ(-799px);
+}
+#panorama .face:nth-child(6) {
+  -webkit-transform: rotateY(180deg) translateZ(-799px);
+  -moz-transform: rotateY(180deg) translateZ(-799px);
+  transform: rotateY(180deg) translateZ(-799px);
+}

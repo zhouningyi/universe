@@ -19,8 +19,6 @@
     "tests"
   ],
   "dependencies": {
-    "zepto": "~1.1.6",
-    "normalize.css": "~3.0.2",
-    "require": "*"
+    "zepto": "~1.1.6"
   }
 }
