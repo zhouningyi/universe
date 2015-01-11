@@ -1,4 +1,7 @@
-define(['zepto'], function() {
+define(['zepto', 'util'], function(z,util) {
+  var requestAnimFrame = util.requestAnimFrame;
+  var cancelAnimFrame = util.cancelAnimFrame;
+
   function Cotroller(container, imgs) {
     //基本节点
     this.container = container;

@@ -1,16 +1,13 @@
 {
   "name": "universe",
+  "main": "index.js",
   "version": "0.0.0",
+  "homepage": "https://github.com/zhouningyi/universe",
   "authors": [
     "野狩 <ningyi.zny@alibaba-inc.com>"
   ],
-  "description": "旋转的全景图（如星空）场景，适用于pc和手机",
-  "main": "index.js",
-  "keywords": [
-    "universe"
-  ],
+  "description": "universe",
   "license": "MIT",
-  "homepage": "zhouningyi.github.io",
   "ignore": [
     "**/.*",
     "node_modules",
@@ -19,8 +16,8 @@
     "tests"
   ],
   "dependencies": {
-    "zepto": "~1.1.6",
     "normalize.css": "~3.0.2",
+    "zepto": "~1.1.6",
     "require": "*"
   }
 }
