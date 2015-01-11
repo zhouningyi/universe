@@ -2,7 +2,7 @@ require.config({
   // baseUrl: "",
   paths: {
     'zepto': '/bower_components/zepto/zepto',
-    'util': './src/util'
+    'util': '/bower_components/wechat-util/index',
   },
   // shim: {
   //   'zepto': {　　　　　　　　
