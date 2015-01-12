@@ -9,8 +9,12 @@ define(function(require) {
   var Controller = require('./src/controller.js');
   var Loading = require('./src/loading.js');
 
-  var loading = new Loading();
-  loading.begin(function(imgs) {
-    new Controller($('.container'), imgs);
-  });
+  function Universe(container) {
+    var loading = new Loading();
+    loading.begin(function(imgs) {
+      new Controller(container, imgs);
+    });
+  }
+
+  return Universe;
 });
